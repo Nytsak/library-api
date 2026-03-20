@@ -1,44 +1,8 @@
-# 📚 Library API (FastAPI)
+# Library API
 
-Асинхронний REST API для управління бібліотекою.
+API для бібліотеки на FastAPI з використанням PostgreSQL, SQLAlchemy і Docker.
 
-## 🔹 Технології
-- FastAPI
-- Pydantic
-- Async/Await
-- Pytest
-- In-memory storage (List[Dict])
-
-## 🔹 Функціонал
-
-- Отримання всіх книг
-- Отримання книги по ID
-- Додавання книги
-- Видалення книги (ідемпотентний DELETE)
-- Фільтрація по статусу та автору
-- Сортування по назві та року
-- Валідація через Pydantic
-- Unit тести
-
-## 🔹 Запуск
+## Запуск проєкту
 
 ```bash
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-```
-
-Swagger документація:
-```
-http://127.0.0.1:8000/docs
-```
-
-## 🔹 Тести
-
-```bash
-pytest
-```
-
-## 🔹 Статуси книг
-
-- available
-- issued
+docker compose up --build
